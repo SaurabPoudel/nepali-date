@@ -17,32 +17,29 @@ A comprehensive Nepali date manipulation library for Deno. This library provides
 
 ## Usage
 
+### Format Nepali Date
+
 ```ts
-import { NepaliDate } from "nepali-date";
+import { formatNepaliDate } from "@saurab/nepali-date";
 
-// Create a new Nepali date
-const date = new NepaliDate();
+console.log(formatNepaliDate(2071, 1, 30));
+// returns "विशेष वर्ष विशेष महीना विशेष दिन"
+```
 
-// Format date
-console.log(date.format("YYYY-MM-DD")); // 2081-01-02
+### Validate Nepali Date
 
-// Convert to Gregorian
-const gregorianDate = date.toGregorian();
+```ts
+import { validateNepaliDate } from "@saurab/nepali-date";
 
-// Date arithmetic
-const tomorrow = date.add({ days: 1 });
-const nextMonth = date.add({ months: 1 });
+validateNepaliDate(2071, 1, 30); // throws error if date is invalid
+```
 
-// Parse from string
-const parsedDate = NepaliDate.parse("2081-01-02");
+### Compare Nepali Dates
 
-// Get date components
-console.log(date.getYear()); // 2081
-console.log(date.getMonth()); // 1 (Baisakh)
-console.log(date.getDate()); // 2
+```ts
+import { compareNepaliDates } from "@saurab/nepali-date";
 
-// Localized output
-console.log(date.format("MMMM DD, YYYY", "ne")); // बैशाख ०२, २०८१
+compareNepaliDates(2071, 1, 30, 2071, 1, 31); // returns negative number if date1 < date2
 ```
 
 ## License
