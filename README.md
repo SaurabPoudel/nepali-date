@@ -45,14 +45,6 @@ console.log(date.getDate()); // 2
 console.log(date.format("MMMM DD, YYYY", "ne")); // बैशाख ०२, २०८१
 ```
 
-## Documentation
-
-For detailed documentation and API reference, visit [our documentation site](https://docs.example.com/nepali-date).
-
-## Contributing
-
-Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
