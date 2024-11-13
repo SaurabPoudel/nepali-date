@@ -1,0 +1,15 @@
+{
+  "name": "@saurab/nepali-date",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "tasks": {
+    "dev": "deno test --watch mod.ts",
+    "test": "deno test --allow-read",
+    "check": "deno check **/*.ts",
+    "lint": "deno lint"
+  },
+  "license": "MIT",
+  "imports": {
+    "@std/assert": "https://deno.land/std@0.208.0/assert/mod.ts"
+  }
+}
