@@ -23,7 +23,7 @@ A comprehensive Nepali date manipulation library for Deno. This library provides
 import { formatNepaliDate } from "@saurab/nepali-date";
 
 console.log(formatNepaliDate(2071, 1, 30));
-// returns "विशेष वर्ष विशेष महीना विशेष दिन"
+// returns "२०७१-०१-३०"
 ```
 
 ### Validate Nepali Date
@@ -31,7 +31,7 @@ console.log(formatNepaliDate(2071, 1, 30));
 ```ts
 import { validateNepaliDate } from "@saurab/nepali-date";
 
-validateNepaliDate(2071, 1, 30); // throws error if date is invalid
+validateNepaliDate(2071, 1, 222); // throws error if date is invalid
 ```
 
 ### Compare Nepali Dates
@@ -39,7 +39,7 @@ validateNepaliDate(2071, 1, 30); // throws error if date is invalid
 ```ts
 import { compareNepaliDates } from "@saurab/nepali-date";
 
-compareNepaliDates(2071, 1, 30, 2071, 1, 31); // returns negative number if date1 < date2
+compareNepaliDates(2071, 1, 20, 2071, 1, 30); // return -10
 ```
 
 ## License
